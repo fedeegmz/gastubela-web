@@ -14,6 +14,7 @@ function memberName(memberId: string): string {
 <template>
   <section>
     <button type="button" @click="store.goToList()">Volver</button>
+    <button type="button" @click="store.openResults(store.activeGatheringId!)">Finalizar</button>
     <h2>{{ store.activeGathering?.name }}</h2>
 
     <MemberList />
