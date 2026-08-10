@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import MemberList from '@/components/MemberList.vue'
 import { useGatheringsStore } from '@/stores/gatherings'
 
 const store = useGatheringsStore()
@@ -8,6 +9,14 @@ const store = useGatheringsStore()
   <section>
     <button type="button" @click="store.goToList()">Volver</button>
     <h2>{{ store.activeGathering?.name }}</h2>
-    <p>Detalle de juntada en construcción.</p>
+
+    <MemberList />
+
+    <section>
+      <header>
+        <h3>Gastos</h3>
+      </header>
+      <p>Todavía no hay gastos cargados.</p>
+    </section>
   </section>
 </template>
